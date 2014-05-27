@@ -1,0 +1,363 @@
+/*
+	Lonely Planet UI Test
+	by Herjit Singh Pulahi
+	developed on Sun 27/11/11
+*/
+
+/* =========== global styles ========== */
+
+body {
+	background-color: #DDD;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+}
+
+p {
+	font-size: 11px;
+	color: #666666;
+}
+
+h1 {
+	font-size: 30px;
+	margin: 0px 0 25px;
+}
+
+h2 {
+	margin: 0 0 12px 0;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0 0 6px 0;
+}
+
+a {
+	font-size: 12px;
+	font-weight: bold;
+	color: #007ACE;
+}
+
+a:hover {
+	color: #09F;
+}
+
+#outerDiv {
+	width: 960px;
+	margin: 0 auto;
+	padding: 15px 20px 10px;
+	background-color: white;
+}
+
+.last {
+	padding-right: 0 !important;
+	margin-right: 0 !important;
+}
+
+.first {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+/* =========== header styles ========== */
+
+#header {
+	overflow: auto;
+	margin-bottom: 30px;
+}
+
+/* menu */
+
+#menu	{
+	float: left;
+	margin: 0 1px 3px;
+	
+	/* Box Shadow */
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 5px #888;
+	
+	/* Rounded Corners */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu a { 
+	outline: none; 
+}
+
+/* nav */
+#nav, #subNav{
+	float: left;
+}
+
+#nav{
+	width: 100%;
+	
+	/* Rounded Corners */
+	-moz-border-radius-topleft: 5px;
+ 	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+
+	/* Rounded Corners */
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+
+	/* Background Gradient */
+   background-image: -moz-linear-gradient(top, #009800, #007C00);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#009800), to(#007C00));
+}
+
+#nav a {
+	position:relative;
+	display:block; 
+	float:left;
+}
+
+#nav a em {
+  display:none;
+}
+
+#nav a span {
+  display:block;
+	margin: 12px 0px;
+}
+
+/* Arrow */
+#nav a.active em{
+  display:block; 
+  overflow:hidden; 
+  border:6px solid #315231; 
+  border-color:#315231 #fff; 
+  border-width:6px 6px 0 6px; 
+  position:absolute; 
+  left:50%; 
+  margin-left:-6px;
+}
+
+#nav li{
+	border-right: 1px solid #017301;
+}
+
+#nav .last{
+	border:none;
+}
+
+#nav li a:link, #nav li a:visited {
+	display: block;
+	color: white;
+	padding: 0px 28px ;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#009800), to(#007C00));
+}
+
+#nav li a:hover	{
+  background-image: -moz-linear-gradient(top, #008100, #005801);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#008100), to(#545454));
+}
+
+#nav li:first-child a{
+	/* Rounded Corners */
+	-moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+}
+
+#nav a.active:link, #nav a.active:active, #nav a.active:visited	{
+	color: #FbFcFc !important;
+  background-image: -moz-linear-gradient(top, #008300, #004F00) !important;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#008100), to(#545454)) !important;
+	
+	/* Inner Shadow */
+	box-shadow: inset 0px 0px 5px  #004d00;
+	-moz-box-shadow: inset 0px 0px 5px #004d00;
+	-webkit-box-shadow: inset  0px 0px 5px #004d00;
+}
+
+/* subNav */
+#subNav {
+	padding: 20px 15px 18px 5px;
+}
+
+#subNav li {
+	margin: 0 40px 0 0;
+}
+
+#subNav a {
+	color: #000;
+}
+
+#subNav a:hover {
+	color: #09F;
+}
+
+#subNav a.active{
+	color: #FFF;
+	padding: 5px 15px;
+	background-color: #008D00;
+	
+	/* Rounded Corners */
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	
+	/* Box Shadow */
+	box-shadow: inset -2px 3px 3px #004d00;
+	-moz-box-shadow: inset -2px 3px 3px #004d00;
+	-webkit-box-shadow: inset  -2px 3px 3px #004d00;
+}
+
+/* =========== content styles ========== */
+
+/* content */
+
+#content {
+	overflow: auto;
+}
+
+/* mainContent */
+
+#mainContent {
+	float: left;
+	width: 640px;
+}
+
+#mainContent h1 {
+	font-weight: normal;
+}
+
+#googleMap {
+	float: left;
+	margin-right: 10px;
+}
+
+#usaTopPicks {
+	float: left;
+	background-color: #F8F8F8;
+	border-left: 3px solid #9A9A9A;
+	width: 287px;
+	margin: 0 10px 10px 0;
+	padding: 20px 10px 0;
+}
+
+#usaTopPicks li {
+	border-bottom: 1px dotted #CCCCCC;
+	padding: 10px 0;
+}
+
+#usaTopPicks li h4 {
+	float: left;
+	color: #9B9B9B;
+	font-size: 28px;
+	margin: 0px 11px 10px 0;
+}
+
+/* middleBanner */
+
+#middleBanner {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 10px 0;
+	border-top: 1px dotted #CCCCCC;
+	border-bottom: 4px solid #CCCCCC;
+}
+
+#middleBanner .captions p {
+	color: #A4A2A3;
+	margin-top: 10px;
+}
+
+#middleBanner .captions p span{
+	font-weight: bold;
+}
+
+#middleBanner img {
+	margin-right: 12px;
+}
+
+/* middleBannerLinks */
+
+ul#middleBannerLinks {
+	margin:10px 0;
+}
+
+#middleBannerLinks li {
+	float: left;
+	border-right: 1px solid #E5E5E5;
+	margin: 5px 0px;
+	padding: 0 30px 0 20px;
+}
+
+#middleBannerLinks li a {
+	background: url('../images/bullet.png') no-repeat 0px 12px;
+	padding: 10px 0 10px 10px;
+}
+
+#middleBannerLinks li.last {
+	border: none;
+}
+
+/* sideBar */
+
+#sideBar {
+	float: left;
+	width: 309px;
+	height: 645px;
+	border-left: 1px dotted #CCCCCC;
+	padding: 55px 0 0 10px;
+}
+
+#sideBar h2 {
+	background-color: #F8F8F8;
+	color: #616161;
+	font-size: 13px;
+	padding: 10px;
+	margin: 0;
+}
+
+#sideBar p {
+	float: left;
+	color: #000;
+	font-weight: bold;
+}
+
+#hotels{
+	margin-bottom: 10px
+}
+
+#hotels li {
+	overflow: auto;
+	position: relative;
+	padding: 10px 0;
+	border-bottom: 1px dotted #CCCCCC;
+}
+
+#hotels li img {
+	float: left;
+	margin-right: 15px;
+}
+
+#hotels li img.starRating {
+	margin: 0 95px 5px 0;
+}
+
+.book_now{
+	position: absolute;
+	color: #222222;
+	background: #DDD url('../images/arrow.png') no-repeat bottom left;
+	bottom : 5px;
+	right: 10px;
+	padding: 10px 20px 12px 15px;
+}
+

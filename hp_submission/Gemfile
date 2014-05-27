@@ -1,0 +1,6 @@
+source 'http://rubygems.org'
+
+gem "clamp"
+gem "rspec"
+gem "json"
+gem "json_pure"
