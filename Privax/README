@@ -1,0 +1,20 @@
+Privax Ruby coding challenge
+=========================================
+
+Herjit Pulahi Submission
+=========================================
+
+1. To run please cd into shopping_cart directory
+2. Run Bundle Install to install any gems
+3. Then from the command line type: 
+    a. Type irb
+    b. Type require './init.rb'
+    c. Type cart = ShoppingCart.new
+
+RSpec Testing
+=========================================
+
+I have added a small number of working examples,
+however they are not designed to be thorough. They
+are merely intended to show know around the RSpec 
+Test suite.
